@@ -8,7 +8,7 @@ database_name = "the-pressroom-db"
 database_id = "a0e179ee-0c1b-4a7b-b9b7-eaf6862f7b6c"
 
 [[kv_namespaces]]
-binding = "sessions"
+binding = "SESSIONS"
 id = "df891e3ddc7e43c289b7995a6d02e08f"
 
 [[kv_namespaces]]
