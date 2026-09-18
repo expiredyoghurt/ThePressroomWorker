@@ -1,0 +1,36 @@
+name = "the-pressroom"
+main = "src/index.ts"
+compatibility_date = "2026-01-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "the-pressroom-db"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+
+[[kv_namespaces]]
+binding = "SESSIONS"
+id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
+
+[[kv_namespaces]]
+binding = "SHUFFLE_SEEDS"
+id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
+
+[[kv_namespaces]]
+binding = "RATE_LIMIT"
+id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
+
+# Thumbnails are stored as base64 data URLs directly in D1
+# (articles.thumbnail_data_url) — no R2 bucket needed.
+
+# Ingestion no longer needs an AI binding — teachers run the master prompt
+# (src/lib/importPromptTemplate.ts) through an external AI tool of their own
+# choosing and paste the resulting JSON into the "Breaking News" tab, which
+# posts to /api/admin/articles/import-json. No API key lives in this Worker
+# for that path.
+#
+# Uncomment below only if you want the OPTIONAL cosine-similarity check in
+# src/lib/similarity.ts (used solely to flag reflect-answer retries that look
+# too close to the revealed model answers) to use Workers AI embeddings
+# instead of falling back to plain token-overlap matching.
+# [ai]
+# binding = "AI"
