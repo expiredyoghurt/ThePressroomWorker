@@ -5,19 +5,19 @@ compatibility_date = "2026-01-01"
 [[d1_databases]]
 binding = "DB"
 database_name = "the-pressroom-db"
-database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+database_id = "a0e179ee-0c1b-4a7b-b9b7-eaf6862f7b6c"
 
 [[kv_namespaces]]
-binding = "SESSIONS"
-id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
+binding = "sessions"
+id = "df891e3ddc7e43c289b7995a6d02e08f"
 
 [[kv_namespaces]]
 binding = "SHUFFLE_SEEDS"
-id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
+id = "8c67823b58d64b6288ec94f04aaf79b5"
 
 [[kv_namespaces]]
 binding = "RATE_LIMIT"
-id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
+id = "1ddc89449bda42e3b40dd7d8ac6ebff2"
 
 # Thumbnails are stored as base64 data URLs directly in D1
 # (articles.thumbnail_data_url) — no R2 bucket needed.
